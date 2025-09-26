@@ -1,24 +1,26 @@
 import { useState } from "react";
+import { assets } from "../assets/Asset";
+import { NavLink } from "react-router-dom";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="h-[70px] relative w-full px-6 md:px-16 lg:px-24 xl:px-32 flex items-center justify-between z-20 bg-white text-gray-700 shadow-[0px_4px_25px_0px_#0000000D] transition-all">
+    <nav className="h-[70px] relative w-full px-6 md:px-16 lg:px-24 xl:px-32 flex items-center justify-between z-20 bg-[#CC2936] text-[#F5F0F6] shadow-[0px_4px_25px_0px_#0000000D] transition-all">
       {/* Logo */}
-      <a href="/" className="text-indigo-600">
-        LOGO
-      </a>
+        <NavLink to="/">
+            <img className="h-20" src={assets.logo} alt="logo" />
+        </NavLink>
 
       {/* Desktop Menu */}
       <ul className="md:flex hidden items-center gap-10">
         <li>
-          <a className="hover:text-gray-500/80 transition" href="#">
+          <a className="hover:text-gray-500/80 transition" href="/">
             Home
           </a>
         </li>
         <li>
-          <a className="hover:text-gray-500/80 transition" href="#">
+          <a className="hover:text-gray-500/80 transition" href="/provinsi">
             Provinsi
           </a>
         </li>
@@ -62,7 +64,7 @@ export default function Navbar() {
               </a>
             </li>
             <li>
-              <a href="#" className="text-sm">
+              <a href="/provinsi" className="text-sm">
                 Provinsi
               </a>
             </li>

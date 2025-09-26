@@ -1,15 +1,20 @@
-import React from 'react'
-import Navbar from './components/Navbar'
-import Footer  from './components/Footer'
-import Dashboard from './components/Dashboard'
+import { Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+import Provinsi from './pages/Provinsi';
 
 const App = () => {
   return (
-    <div>
+    <div className={`text-default min-h-screen transition-colors duration-300`}>
       <Navbar/>
-      <Dashboard/>
+
+      <div>
+        <Routes>
+          <Route path="/provinsi" element={<Provinsi />} />
+        </Routes>
+      </div>
       <Footer/>
-    </div>
+  </div>
   )
 }
 
