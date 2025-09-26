@@ -10,24 +10,28 @@ export const assets = {
 
 export const provinsi = [
     {
+        id: 1,
         nama: "Aceh",
         path: "aceh",
         image: aceh,
         desc: "Aceh adalah sebuah provinsi di Pulau Sumatra, Indonesia. Ibu kota provinsi ini berada di Kota Banda Aceh. Provinsi ini terletak pada bagian ujung utara Pulau Sumatra, serta provinsi ini juga dekat dengan Kepulauan Andaman dan Nikobar di India dan terpisahkan oleh Laut Andaman. Provinsi Aceh berbatasan dengan Teluk Benggala dan Laut Andaman di sebelah utara, Samudra Hindia di sebelah barat, Selat Malaka di sebelah timur, dan Sumatera Utara di sebelah tenggara dan selatan."
     },
-        {
+    {
+        id: 2,
         nama: "Sumatera Utara",
         path: "sumut",
         image: sumut,
         desc: "Sumatera Utara merupakan provinsi dengan jumlah penduduk terbesar keempat di Indonesia, setelah Provinsi Jawa Barat, Jawa Timur, dan Jawa Tengah, dan terbanyak di Pulau Sumatra, dan yang terbanyak di luar Pulau Jawa. Pada awal tahun 2025, penduduk Sumatera Utara berjumlah 15.785.839 jiwa, dengan kepadatan penduduk 216 jiwa/km2."
     },
     {
+        id: 3,
         nama: "Sumatera Barat",
         path: "sumbar",
         image: sumbar,
         desc: "Sumatera Barat adalah sebuah provinsi di Indonesia yang terletak di Pulau Sumatra dengan ibu kota Padang. Provinsi Sumatera Barat terletak sepanjang pesisir barat Sumatra bagian tengah, dataran tinggi Bukit Barisan di sebelah timur, dan sejumlah pulau di lepas pantainya seperti Kepulauan Mentawai. Dari utara ke selatan, provinsi dengan wilayah seluas 42.120,00 km² ini berbatasan dengan empat Provinsi, yakni Sumatera Utara, Riau, Jambi, dan Bengkulu."
     },
     {
+        id: 4,
         nama: "Sumatera Selatan",
         path: "sumsel",
         image: sumsel,
