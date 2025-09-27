@@ -14,6 +14,7 @@ const App = () => {
         </Routes>
       </div>
       <Footer/>
+      <img src="/papsel.webp" alt="" />
   </div>
   )
 }

@@ -39,6 +39,10 @@ const Provinsi = () => {
   const firstPostIndex = lastPostIndex - postPerPage;
   const currentPosts = filteredProvinsi.slice(firstPostIndex, lastPostIndex);
 
+  console.log("currentPage:", currentPage);
+  console.log("firstPostIndex:", firstPostIndex, "lastPostIndex:", lastPostIndex);
+  console.log("currentPosts:", currentPosts.map(p => p.nama));
+
   return (
     <div className="py-12 px-6 bg-gray-50 min-h-screen">
       <div className="max-w-7xl mx-auto">
