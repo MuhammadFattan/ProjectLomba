@@ -8,9 +8,9 @@ export default function Navbar() {
   return (
     <nav className="h-[70px] relative w-full px-6 md:px-16 lg:px-24 xl:px-32 flex items-center justify-between z-20 bg-[#CC2936] text-[#F5F0F6] shadow-[0px_4px_25px_0px_#0000000D] transition-all">
       {/* Logo */}
-        <NavLink to="/">
+        <a href="/">
             <img className="h-20" src={assets.logo} alt="logo" />
-        </NavLink>
+        </a>
 
       {/* Desktop Menu */}
       <ul className="md:flex hidden items-center gap-10">
