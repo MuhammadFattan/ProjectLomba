@@ -2,6 +2,7 @@ import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Provinsi from './pages/Provinsi';
+import ProvinsiDetail from './pages/ProvinsiDetail';
 
 const App = () => {
   return (
@@ -11,6 +12,7 @@ const App = () => {
       <div>
         <Routes>
           <Route path="/provinsi" element={<Provinsi />} />
+          <Route path='/provinsi/:path' element={<ProvinsiDetail />}/>
         </Routes>
       </div>
       <Footer/>
