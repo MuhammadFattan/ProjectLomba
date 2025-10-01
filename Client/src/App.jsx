@@ -3,16 +3,22 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Provinsi from './pages/Provinsi';
 import ProvinsiDetail from './pages/ProvinsiDetail';
+import Home from './pages/Home';
+import { useAppContext } from './contexts/AppContext';
+import About from './pages/About';
 
 const App = () => {
+  const { isDarkMode } = useAppContext(); 
   return (
-    <div className={`text-default min-h-screen transition-colors duration-300`}>
+    <div className={`${isDarkMode ? 'bg-gray-900' : 'bg-white'} text-default min-h-screen transition-colors duration-300`}>
       <Navbar/>
 
-      <div>
+      <div className='px-6 md:px-16 lg:px-24 xl:px-32'>
         <Routes>
-          <Route path="/provinsi" element={<Provinsi />} />
-          <Route path='/provinsi/:path' element={<ProvinsiDetail />}/>
+          <Route path="/" element={<Home />} />
+          <Route path="/jelajahi" element={<Provinsi />} />
+          <Route path='/jelajahi/:path' element={<ProvinsiDetail />}/>
+          <Route path="/tentang" element={<About />} />
         </Routes>
       </div>
       <Footer/>

@@ -1,6 +1,15 @@
 import React from "react";
+import { useAppContext } from "../contexts/AppContext";
 
-const SearchBar = ({ query, setQuery, isFocused, setIsFocused, handleClear }) => {
+const SearchBar = ({
+  query,
+  setQuery,
+  isFocused,
+  setIsFocused,
+  handleClear,
+}) => {
+
+  const { isDarkMode } = useAppContext();
   return (
     <div
       className={`my-10 relative group transition-all duration-300 ease-in-out ${
@@ -39,8 +48,8 @@ const SearchBar = ({ query, setQuery, isFocused, setIsFocused, handleClear }) =>
         value={query}
         onChange={(e) => setQuery(e.target.value)}
         className={`w-full h-16 px-16 text-lg font-light bg-transparent border-none outline-none placeholder-gray-400 transition-all duration-300 ease-in-out ${
-          isFocused ? "text-gray-800 placeholder-gray-500" : "text-gray-700"
-        }`}
+          isFocused ? " placeholder-gray-500" : "text-gray-700"
+        } ${isDarkMode ? 'text-white bg-gray-800' : 'text-gray-800' }`}
         onFocus={() => setIsFocused(true)}
         onBlur={() => setIsFocused(false)}
       />

@@ -40,3 +40,7 @@
     width: 100%;
     height: 400px;
 }
+
+@theme {
+    --color-primary: #CC2936;
+}

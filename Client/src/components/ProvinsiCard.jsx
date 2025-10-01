@@ -1,8 +1,10 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import { useAppContext } from "../contexts/AppContext";
 
 const ProvinsiCard = ({ provinsi }) => {
   const navigate = useNavigate();
+  const { isDarkMode } = useAppContext();
 
   return (
     <li
@@ -17,7 +19,7 @@ const ProvinsiCard = ({ provinsi }) => {
       ></div>
 
       {/* Fallback gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-purple-500/20 opacity-100 group-hover:opacity-0 transition-opacity duration-700"></div>
+      <div className={`${isDarkMode ? 'bg-gray-800' : 'bg-gradient-to-br from-blue-500/20 to-purple-500/20'} absolute inset-0 opacity-100 group-hover:opacity-0 transition-opacity duration-700`}></div>
 
       {/* Overlay */}
       <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
@@ -26,7 +28,7 @@ const ProvinsiCard = ({ provinsi }) => {
       <div className="relative z-10 p-6 h-64 flex flex-col justify-between">
         <div className="flex-grow">
           <div className="w-12 h-1 bg-blue-500 rounded-full mb-4 group-hover:bg-white transition-colors duration-300"></div>
-          <h2 className="text-xl font-bold text-gray-800 group-hover:text-white transition-colors duration-300 mb-3">
+          <h2 className={`${isDarkMode ? 'text-white' : 'text-gray-800'}text-xl font-bold group-hover:text-white transition-colors duration-300 mb-3`}>
             {provinsi.nama}
           </h2>
           <p className="text-sm text-gray-600 group-hover:text-gray-200 transition-colors duration-300 leading-relaxed line-clamp-4">

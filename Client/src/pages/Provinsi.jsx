@@ -3,12 +3,14 @@ import { provinsi } from "../assets/Asset";
 import SearchBar from "../components/SearchBar";
 import ProvinsiCard from "../components/ProvinsiCard";
 import Pagination from "../components/Pagination";
+import { useAppContext } from "../contexts/AppContext";
 
 const Provinsi = () => {
   const [query, setQuery] = useState("");
   const [isFocused, setIsFocused] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
   const [postPerPage, setPostPerPage] = useState(8);
+  const { isDarkMode } = useAppContext();
 
   // atur postsPerPage berdasarkan ukuran layar
   useEffect(() => {
@@ -44,10 +46,10 @@ const Provinsi = () => {
   console.log("currentPosts:", currentPosts.map(p => p.nama));
 
   return (
-    <div className="py-12 px-6 bg-gray-50 min-h-screen">
+    <div className={`${isDarkMode ? 'bg-gray-900 text-gray-100' : 'bg-gray-50 text-gray-700' } py-12 px-6 min-h-screen`}>
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-800 mb-4">
+          <h1 className="text-4xl font-bold mb-4">
             Jelajahi Provinsi Indonesia
           </h1>
           <p className="text-gray-600 text-lg max-w-2xl mx-auto">
